@@ -20,7 +20,7 @@ def filter_Track_Num(CarrierName_TrackNum):
     if CarrierName_TrackNum is NaN:
         return NaN
     else:
-        return CarrierName_TrackNum[8:-1]
+        return CarrierName_TrackNum.split('(')[-1][:-1]
 
 def main():
     # Use pandas for data processing.
