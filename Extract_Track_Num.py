@@ -27,8 +27,8 @@ def main():
     Orders = pd.read_csv(args.path_to_order_csv) 
 
     # Filter column headers for tracking number csv file to output.
-    Orders = Orders[['Order ID', 'Carrier Name & Tracking Number', 'Title',  'Order Date', \
-         'Shipment Date', 'Purchase Price Per Unit', 'Quantity','Item Total']]
+    Orders = Orders[['Title','Carrier Name & Tracking Number',  \
+         'Purchase Price Per Unit', 'Quantity','Item Total']]
 
     # Sparse tracking numbers out of "Carrier Name & Tracking Number"
     Orders['Carrier Name & Tracking Number'] = Orders['Carrier Name & Tracking Number'].apply(filter_Track_Num)
